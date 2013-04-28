@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="rounded_image_view">
+    <attr name="cornerTopLeft" format="integer" />
+    <attr name="cornerTopRight" format="integer" />
+    <attr name="cornerBottomLeft" format="integer" />
+    <attr name="cornerBottomRight" format="integer" />
+    <attr name="cornerRadius" format="integer" />
+  </declare-styleable>
+</resources>
