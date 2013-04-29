@@ -1,77 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rounded="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
   <LinearLayout
       android:orientation="vertical"
       android:layout_width="match_parent"
-      android:layout_height="40dp">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="0.2"
-        android:text="Scale Type" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="0.2"
-        android:text="Rounded" />
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="0.2"
-        android:text="Standard" />
-  </LinearLayout>
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="100dp">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="0.2"
-        android:text="center crop" />
-    <com.threeDBJ.widget.RoundedImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:scaleType="center_crop"
-        android:layout_weight="0.4"
-        android:cornerRadius="10px"
-        android:src="@drawable/sample" />
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:scaleType="center_crop"
-        android:layout_weight="0.4"
-        android:src="@drawable/sample" />
-  </LinearLayout>
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="100dp">
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_weight="0.2"
-        android:text="center crop" />
-    <com.threeDBJ.widget.RoundedImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:scaleType="fit_xy"
-        android:layout_weight="0.4"
-        android:cornerRadius="10px"
-        android:src="@drawable/sample" />
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:scaleType="fit_xy"
-        android:layout_weight="0.4"
-        android:src="@drawable/sample" />
+      android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+      <TextView
+          style="@style/sample_text"
+          android:text="Scale Type" />
+      <TextView
+          style="@style/sample_text"
+          android:layout_weight="0.4"
+          android:text="Rounded" />
+      <TextView
+          style="@style/sample_text"
+          android:layout_weight="0.4"
+          android:text="Standard" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+      <TextView
+          style="@style/sample_text"
+          android:text="center crop" />
+      <com.threeDBJ.widget.RoundedImageView
+          style="@style/sample_image"
+          android:scaleType="centerCrop"
+          rounded:cornerRadius="10px"/>
+      <ImageView
+          style="@style/sample_image"
+          android:scaleType="centerCrop"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+      <TextView
+          style="@style/sample_text"
+          android:text="center crop" />
+      <com.threeDBJ.widget.RoundedImageView
+          style="@style/sample_image"
+          android:scaleType="fitXY"
+          rounded:cornerRadius="10px" />
+      <ImageView
+          style="@style/sample_image"
+          android:scaleType="fitXY" />
+    </LinearLayout>
   </LinearLayout>
 </ScrollView>

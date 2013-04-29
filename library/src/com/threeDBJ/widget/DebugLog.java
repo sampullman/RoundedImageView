@@ -1,0 +1,109 @@
+package com.threeDBJ.widget;
+
+import android.util.Log;
+
+/** A wrapper for android's Log class that can be disabled */
+public final class DebugLog {
+
+    private static boolean loggingEnabled = true;
+
+    private DebugLog() {
+    }
+
+    /**
+     * Enables or disables logging throughout the app
+     *
+     * @param enabled Whether logging should be enabled
+     */
+    public static void setDebugLogging(boolean enabled) {
+        loggingEnabled = enabled;
+    }
+
+    public static int v(String tag, String msg) {
+        int result = 0;
+        if (loggingEnabled) {
+            result = Log.v(tag, msg);
+        }
+        return result;
+    }
+
+    public static int v(String tag, String msg, Throwable tr) {
+        int result = 0;
+        if (loggingEnabled) {
+            result = Log.v(tag, msg, tr);
+        }
+        return result;
+    }
+
+    public static int d(String tag, String msg) {
+        int result = 0;
+        if (loggingEnabled) {
+            result = Log.d(tag, msg);
+        }
+        return result;
+    }
+
+    public static int d(String tag, String msg, Throwable tr) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.d(tag, msg, tr);
+        }
+        return result;
+    }
+
+    public static int i(String tag, String msg) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.i(tag, msg);
+        }
+        return result;
+    }
+
+    public static int i(String tag, String msg, Throwable tr) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.i(tag, msg, tr);
+        }
+        return result;
+    }
+
+    public static int w(String tag, String msg) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.w(tag, msg);
+        }
+        return result;
+    }
+
+    public static int w(String tag, String msg, Throwable tr) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.w(tag, msg, tr);
+        }
+        return result;
+    }
+
+    public static int w(String tag, Throwable tr) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.w(tag, tr);
+        }
+        return result;
+    }
+
+    public static int e(String tag, String msg) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.e(tag, msg);
+        }
+        return result;
+    }
+
+    public static int e(String tag, String msg, Throwable tr) {
+    	int result = 0;
+        if (loggingEnabled) {
+            result = Log.e(tag, msg, tr);
+        }
+        return result;
+    }
+}
